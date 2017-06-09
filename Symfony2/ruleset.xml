@@ -98,7 +98,7 @@
     <!-- Custom rules -->
     <rule ref="Squiz.Strings.ConcatenationSpacing">
         <properties>
-            <property name="ignoreNewlines" value="1"/>
+            <property name="ignoreNewlines" value="true"/>
         </properties>
     </rule>
     <rule ref="Symfony2.Commenting.ClassComment.Missing">
