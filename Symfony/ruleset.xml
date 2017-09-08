@@ -104,10 +104,10 @@
             <property name="ignoreNewlines" value="true"/>
         </properties>
     </rule>
-    <rule ref="Symfony2.Commenting.ClassComment.Missing">
+    <rule ref="Symfony.Commenting.ClassComment.Missing">
         <severity>0</severity>
     </rule>
-    <rule ref="Symfony2.Commenting.FunctionComment.Missing">
+    <rule ref="Symfony.Commenting.FunctionComment.Missing">
         <severity>0</severity>
     </rule>
 </ruleset>
