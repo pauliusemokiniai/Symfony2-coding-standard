@@ -55,13 +55,13 @@ class ArgumentsSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        $tokens = $phpcsFile->getTokens();
-        $function = $tokens[$stackPtr];
-
-        if ($tokens[$function['parenthesis_opener']]['line'] !== $tokens[$function['parenthesis_closer']]['line']) {
-            $error = 'Declare all the arguments on the same line as the method/function name, no matter how many arguments there are.';
-            $phpcsFile->addError($error, $stackPtr, 'Invalid');
-        }
+//        $tokens = $phpcsFile->getTokens();
+//        $function = $tokens[$stackPtr];
+//
+//        if ($tokens[$function['parenthesis_opener']]['line'] !== $tokens[$function['parenthesis_closer']]['line']) {
+//            $error = 'Declare all the arguments on the same line as the method/function name, no matter how many arguments there are.';
+//            $phpcsFile->addError($error, $stackPtr, 'Invalid');
+//        }
     }
 
 }
