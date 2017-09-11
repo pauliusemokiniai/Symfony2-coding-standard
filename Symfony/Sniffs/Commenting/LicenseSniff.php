@@ -56,12 +56,12 @@ class LicenseSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        if (false === $phpcsFile->findPrevious([T_COMMENT, T_DOC_COMMENT_OPEN_TAG], $stackPtr)) {
-            $phpcsFile->addWarning(
-                'The license block has to be present at the top of every PHP file, before the namespace',
-                $stackPtr,
-                'Warning'
-            );
-        }
+//        if (false === $phpcsFile->findPrevious([T_COMMENT, T_DOC_COMMENT_OPEN_TAG], $stackPtr)) {
+//            $phpcsFile->addWarning(
+//                'The license block has to be present at the top of every PHP file, before the namespace',
+//                $stackPtr,
+//                'Warning'
+//            );
+//        }
     }
 }
