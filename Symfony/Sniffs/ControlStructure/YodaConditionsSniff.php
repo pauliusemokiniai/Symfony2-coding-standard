@@ -63,25 +63,25 @@ class YodaConditionsSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        $tokens = $phpcsFile->getTokens();
-        $opener = $tokens[$stackPtr]['parenthesis_opener'];
-        $closer = $tokens[$stackPtr]['parenthesis_closer'];
-
-        do {
-            $comparison = $phpcsFile->findNext($this->yodas, $opener + 1, $closer);
-
-            if (false === $comparison) {
-                break;
-            }
-
-            if (T_VARIABLE === $tokens[$comparison - 2]['code'] && T_VARIABLE !== $tokens[$comparison + 2]['code']) {
-                $error = 'Use Yoda conditions when checking a variable against an expression to avoid an accidental assignment inside the condition statement';
-                $phpcsFile->addError($error, $stackPtr, 'Invalid');
-            }
-
-            $opener = $comparison + 1;
-
-        } while ($opener < $closer);
+//        $tokens = $phpcsFile->getTokens();
+//        $opener = $tokens[$stackPtr]['parenthesis_opener'];
+//        $closer = $tokens[$stackPtr]['parenthesis_closer'];
+//
+//        do {
+//            $comparison = $phpcsFile->findNext($this->yodas, $opener + 1, $closer);
+//
+//            if (false === $comparison) {
+//                break;
+//            }
+//
+//            if (T_VARIABLE === $tokens[$comparison - 2]['code'] && T_VARIABLE !== $tokens[$comparison + 2]['code']) {
+//                $error = 'Use Yoda conditions when checking a variable against an expression to avoid an accidental assignment inside the condition statement';
+//                $phpcsFile->addError($error, $stackPtr, 'Invalid');
+//            }
+//
+//            $opener = $comparison + 1;
+//
+//        } while ($opener < $closer);
     }
 
 }
