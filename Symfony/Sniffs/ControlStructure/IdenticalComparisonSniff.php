@@ -56,7 +56,7 @@ class IdenticalComparisonSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        $phpcsFile->addWarning('Always use identical comparison unless you need type juggling', $stackPtr, 'Warning');
+//        $phpcsFile->addWarning('Always use identical comparison unless you need type juggling', $stackPtr, 'Warning');
     }
 
 }
